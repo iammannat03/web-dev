@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 100px;
+}
+.btn-container{
+    height: 400px;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+h2{
+    text-align: center;
+}
+.btn{
+    height: 180px;
+    width: 180px;
+    border-radius: 20px;
+    background-color: pink;
+    border: 5px solid black;
+}
+.red{
+    background-color: rgba(237, 116, 116);
+}
+.green{
+    background-color: rgb(78, 185, 128);
+}
+.yellow{
+    background-color: rgb(237, 181, 98);
+}
+.purple{
+    background-color: rgb(203, 145, 203);
+}
+.gameFlash{
+    background-color: #fff;
+}
+.userFlash{
+    background-color: rgb(112, 255, 112);
+}
+.gameOverBG{
+    background-color: red;
+}
