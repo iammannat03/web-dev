@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Volumes/External SSD-A1/Classroom/Major_&_Minor_Projects/logo.png">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="style-spotify.css">
+
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="expandSidebarCheckBox">
+        <input type="checkbox" id="expandQueueCheckBox">
+        <div class="sidebar">
+            
+            <!--Sidebar Box 1 (Home and Search)-->
+            <div class="sidebar-box-1">
+                <!--Home-->
+                <div class="sidebar-box-1-home scale-button-sp">
+                    <span class="material-symbols-outlined">home</span>
+                    Home
+                </div>
+
+                <!--Search-->
+                <div class="sidebar-box-1-2-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </div>
+            </div>
+
+            <!--Sidebar Box 2(Your Library)-->
+            <div class="sidebar-box-2">
+                <!--line 1-your library-->
+                <div class="sidebar-box-2-l1">
+                    <div class="sidebar-box-2-l1-head">
+                        <i class="fa-regular fa-bookmark"></i>&nbsp; &nbsp;
+                        Your Library
+                    </div>
+                    <div class="sidebar-box-2-l1-icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <label for="expandSidebarCheckBox">
+                            <i class="fa-sharp fa-solid fa-arrow-right" id=""></i>
+                            <i class="fa-sharp fa-solid fa-arrow-left" id=""></i>
+                        </label>
+                        
+                    </div>
+                </div>
+                <!-- line 2-Badges-->
+                <div class="sidebar-box-2-l2">
+                    <div class="sidebar-box-2-l2-badge scale-button-sp">Playlists</div>
+                    <div class="sidebar-box-2-l2-badge scale-button-sp">Artists</div>
+                    <div class="sidebar-box-2-l2-badge scale-button-sp">Albums</div>
+                </div>
+                <!-- line 3-search/recents-->
+                <div class="sidebar-box-2-l3">
+                    <i class="fa-solid fa-magnifying-glass scale-button-sp"></i>
+                    <button class="sidebar-box-2-l3-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Recents
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item disabled" href="#">Sort by</a></li>
+                        <li><a class="dropdown-item" href="#">Recents</a></li>
+                        <li><a class="dropdown-item" href="#">Recently Added</a></li>
+                        <li><a class="dropdown-item" href="#">Alphabetical</a></li>
+                        <li><a class="dropdown-item" href="#">Creator</a></li>
+                    </ul>
+                </div>
+                <!--section 4-playlists-->
+                <div class="sidebar-box-3">
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67706c0000da8420a5ee1de7e6631d78ab28a8" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">DaBaby Complete</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; DaBaby</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Liked Songs</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; 454 songs</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="data:image/jpeg;base64,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" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Feeding the Beast</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Mannat</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67706c0000da8439e47ac582b4885ea327b9d3" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Quack // Best Phonk 2023</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; eartquak3</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67706c0000da845c209d56bd06ecad63cdc5ce" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Jasiah - 3</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Topsify Radio</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zeMOltyv4lECNoVY8HG8QFUro2MyUouvNH3VTnY&usqp=CAE&s" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Jasiah</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Artist</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67706c0000da84175c629832f7cee13f7ff395" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Brazilian Phonk</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; AV</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67706c0000da8437195ea32c1f103b1759ea30" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">         
+                            <div class=" sidebar-playlist-box-name-title" >
+                                Metro Boomin - Spid...
+                            </div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Capsule Music</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="data:image/jpeg;base64,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" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Shubh Remix</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Spotify</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67616d0000b273871aeb865528b8ea4f721b15" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Tamborzão Raiz</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; MC Kevin o Chris</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://seed-mix-image.spotifycdn.com/v6/img/hip_hop/7dGJo4pcD2V6oG8kP0tJRR/en/default" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Hip Hop Remix</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Spotify</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO00kolG-default.jpg" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">This is Jason Derulo</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Spotify</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box scale-button-sp">
+                        <div class="sidebar-playlist-box-img"><img src="https://i.scdn.co/image/ab67706f00000002d68992b60ea9d108d4e425cd" alt="##"></div>
+                        <div class="sidebar-playlist-box-name">
+                            <div class="sidebar-playlist-box-name-title">Hip Te Hop</div>
+                            <div class="sidebar-playlist-box-name-subtitle">Playlist &bull; Spotify</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-playlist-box"><div class="sidebar-playlist-box-img"></div>
+                    </div>
+                    <div class="sidebar-playlist-box"><div class="sidebar-playlist-box-img"></div>
+                    </div>
+                    <div class="sidebar-playlist-box"><div class="sidebar-playlist-box-img"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--Main Content-->
+        <div class="main-content">
+            <!--Header-->
+            <div class="main-content-header-icons">
+                <!--Nav buttons-->
+                <div class="main-content-header-icons-box1">
+                    <span class="material-symbols-outlined" id="b1"><p>arrow_back_ios</p></span>
+                    <span class="material-symbols-outlined" id="b2"><p>arrow_forward_ios</p></span>
+                </div>
+                <div class="main-content-header-icons-box2">
+                    <button type="button" class="btn btn-light scale-button-sp">Explore Premium</button>
+                    <button type="button" class="btn btn-dark scale-button-sp"><i class="fa-regular fa-circle-down"></i>&nbsp;Install App</button>
+                    <div class="user"><i class="fa-regular fa-user scale-button-sp"></i></div>
+                </div>
+            </div>
+            
+            <!--Main Box 1 (good morning)-->
+            <div class="main-content-box1">
+                <h2 class="main-content-box1-header">
+                    Good Morning
+                </h2>
+                <div class="main-content-box1-cards">
+                    <div class="main-content-box1-in-card">
+                        <div class="main-content-box1-in-card-img"><img src="https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png" alt="..."></div>
+                        <div class="main-content-box1-in-card-text">Liked Songs</div>
+                        <div class="main-content-box1-in-card-play">
+                            <i class="fa-sharp fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="main-content-box1-in-card">
+                        <div class="main-content-box1-in-card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zeMOltyv4lECNoVY8HG8QFUro2MyUouvNH3VTnY&usqp=CAE&s" alt="..."></div>
+                        <div class="main-content-box1-in-card-text">Jasiah</div>
+                        <div class="main-content-box1-in-card-play">
+                            <i class="fa-sharp fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="main-content-box1-in-card">
+                        <div class="main-content-box1-in-card-img"><img src="https://seed-mix-image.spotifycdn.com/v6/img/hip_hop/7dGJo4pcD2V6oG8kP0tJRR/en/default" alt="..."></div>
+                        <div class="main-content-box1-in-card-text">Hip Hop Remix</div>
+                        <div class="main-content-box1-in-card-play">
+                            <i class="fa-sharp fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="main-content-box1-in-card">
+                        <div class="main-content-box1-in-card-img"><img src="https://i.scdn.co/image/ab67706f00000002d68992b60ea9d108d4e425cd" alt="..."></div>
+                        <div class="main-content-box1-in-card-text">Hip Te Hop</div>
+                        <div class="main-content-box1-in-card-play">
+                            <i class="fa-sharp fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="main-content-box1-in-card">
+                        <div class="main-content-box1-in-card-img"><img src="https://i.scdn.co/image/ab67706c0000da8420a5ee1de7e6631d78ab28a8" alt="..."></div>
+                        <div class="main-content-box1-in-card-text">DaBaby Complete</div>
+                        <div class="main-content-box1-in-card-play">
+                            <i class="fa-sharp fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="main-content-box1-in-card">
+                        <div class="main-content-box1-in-card-img"><img src="https://i.scdn.co/image/ab67706c0000da8437195ea32c1f103b1759ea30" alt="..."></div>
+                        <div class="main-content-box1-in-card-text">Metro Boomin - Spiderman Across the Spider Verse</div>
+                        <div class="main-content-box1-in-card-play">
+                            <i class="fa-sharp fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content-box2">
+                <h5 class="main-content-box2-header">
+                    Your top mixes
+                </h5>
+                <div class="main-content-box2-cards">
+                    <!--Individual Cards-->
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://seed-mix-image.spotifycdn.com/v6/img/pop/6M2wZ9GZgrQXHCFfjv46we/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Pop Mix</h5>
+                              <p class="card-text">Charlie Puth, Sam Smith, Jason Derulo...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://seed-mix-image.spotifycdn.com/v6/img/hindi/5GnnSrwNCGyfAU4zuIytiS/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Hindi Mix</h5>
+                              <p class="card-text">Romy, Rahat Fateh Ali Khan, Pritam...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://seed-mix-image.spotifycdn.com/v6/img/hip_hop/6U3ybJ9UHNKEdsH7ktGBZ7/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Hip Hop Mix</h5>
+                              <p class="card-text">Dr. Dre, Travis Scott, Eminem an...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://seed-mix-image.spotifycdn.com/v6/img/r_and_b/1XkoF8ryArs86LZvFOkbyr/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">R&B Mix</h5>
+                              <p class="card-text">Pink Sweat$, Jamie Foxx, Trey Songz...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/1wRPtKGflJrBx9BmLsSwlU/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Pritam Mix</h5>
+                              <p class="card-text">Shafdat Amanat Ali, Mohammed Irfan and...</p>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-content-box2">
+                <h5 class="main-content-box2-header">
+                    Made For Mannat
+                </h5>
+                <div class="main-content-box2-cards">
+                    <!--Individual Cards-->
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebcb6926f44f620555ba444fca/1/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Daily Mix 1</h5>
+                              <p class="card-text">Pritam, Amaal Mallik, Sneha...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb19c2790744c792d05570bb71/2/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Daily Mix 2</h5>
+                              <p class="card-text">DaBaby, DJ Khalil, Metro Boomin an...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb65d54c88ab4c1abf204b360f/3/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Daily Mix 3</h5>
+                              <p class="card-text">Sidhu Moose Wala, Shubh, Karan Aujl...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebb19af0ea736c6228d6eb539c/4/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Daily Mix 4</h5>
+                              <p class="card-text">Pritam, Sona Mohapatra, Ankit...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebd98340df62199a49a839ffce/5/en/default" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Daily Mix 5</h5>
+                              <p class="card-text">Amrit Maan, Kaka, Jordan Sandhu...</p>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-content-box2">
+                <h5 class="main-content-box2-header">
+                    Spotify original & executive shows
+                </h5>
+                <div class="main-content-box2-cards">
+                    <!--Individual Cards-->
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab6765630000ba8a3c0cd1efd66f78f05f13632a" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">True Story Bro! w...</h5>
+                              <p class="card-text">Spotify<br><br></p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67656300005f1f8891d6c30daae2a9c9cbde02" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Gamers Unplugg...</h5>
+                              <p class="card-text">Spotify<br><br></p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67656300005f1fde3404901270d81ee3bbc408" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">The Ranveer Show</h5>
+                              <p class="card-text">BeerBiceps <br> <br></p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67656300005f1f2809ebcc5d81ed167183074e" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Bhaskar Bose (H...</h5>
+                              <p class="card-text">Spotify Studios <br><br></p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67656300005f1f04f358b3609163f444e02d2f" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Horror Time - S...</h5>
+                              <p class="card-text">Horror Time<br><br></p>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-content-box2">
+                <h5 class="main-content-box2-header">
+                    Today's Biggest hits
+                </h5>
+                <div class="main-content-box2-cards">
+                    <!--Individual Cards-->
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f00000002461e70044443f99c3235ddcf" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Mega Hit Mix</h5>
+                              <p class="card-text">A mega mix of 75 favorites from the la...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f0000000276eefbf1e6802124fc42865b" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Pop Shots</h5>
+                              <p class="card-text">All your pop favorites. Cover: Selena Gomez...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67616d0000b273e452a6e11147f3e56aee6f5b" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Bollywood Butter</h5>
+                              <p class="card-text">B bole toh biggest blockbusters, right her...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f00000002975118eef110cf76bc26137d" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Hot Hindi Hits</h5>
+                              <p class="card-text">Hottest Hindi music served here. Cove...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f00000002a11e0756ea85746dc69f258a" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Punjabi X</h5>
+                              <p class="card-text">Catch all the collaborations...</p>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-content-box2">
+                <h5 class="main-content-box2-header">
+                    More of what you like
+                </h5>
+                <div class="main-content-box2-cards">
+                    <!--Individual Cards-->
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f00000002e1b95596e2ee0d6a90b0ab1b" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">RAP 91</h5>
+                              <p class="card-text">Best of Hip-Hop from India. Cover- Divine...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f00000002ad9be2223332f09298eb8151" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Punjabi Bae</h5>
+                              <p class="card-text">Artists that are always on our minds!</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706c0000da8415a8ea97c4198913e73f3240" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Desi Hip Hop</h5>
+                              <p class="card-text">Best of hip-hop tracks from South Asia...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f000000027c54556a7644e98f782f065d" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Trending Now P...</h5>
+                              <p class="card-text">All that's viral, stream now!</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="main-content-box2-in-card">
+                        <div class="card">
+                            <img src="https://i.scdn.co/image/ab67706f000000025ff36d442a7631c19f92b2b7" class="card-img-top" alt="...">
+                            <div class="main-content-box2-in-card-play">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Trending Now In...</h5>
+                              <p class="card-text">Every track you're listening/should be l...</p>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+            <div class="main-footer">
+                <div class="main-footer-b1">
+                    <div class="main-footer-b1-box1">
+                        <ul>
+                            <li id="f1" style="cursor: default; text-decoration: none; color: white; font-weight: 600;">Company</li>
+                            <li>About</li>
+                            <li>Jobs</li>
+                            <li>For the Record</li>
+                        </ul>
+                        <ul>
+                            <li id="f2" style="cursor: default; text-decoration: none; color: white; font-weight: 600;">Communities</li>
+                            <li>For Artists</li>
+                            <li>Developers</li>
+                            <li>Advertising</li>
+                            <li>Investors</li>
+                            <li>Vendors</li>
+                            <li>Spotify for Work</li>
+                        </ul>
+                        <ul>
+                            <li id="f3" style="cursor: default; text-decoration: none; color: white; font-weight: 600;">Useful links</li>
+                            <li>Support</li>
+                            <li>Free Mobile App</li>
+                        </ul>
+                    </div>
+                    <div class="main-footer-b1-box2">
+                        <i class="fa-brands fa-instagram scale-button-sp"></i>
+                        <i class="fa-brands fa-twitter scale-button-sp"></i>
+                        <i class="fa-brands fa-facebook scale-button-sp"></i>
+                    </div>
+                </div>
+                <div class="main-footer-b2">
+                        <ul>
+                            <li style="margin-left: 0;">Legal</li>
+                            <li>Privacy Center</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies</li>
+                            <li>About Ads</li>
+                            <li>Accessibility</li>
+                        </ul>
+                        <ul>
+                            <li>© 2023 Spotify AB</li>
+                            <li>This is a <br>Spotify webpage clone <br>made by Mannat Jaiswal</li>
+                        </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="queue">
+            <div class="queue-l1">
+                <div id="a1">Queue</div>
+                <label for="expandQueueCheckBox">
+                    <div id="a2"><i class="fa-solid fa-xmark scale-button-sp"></i></div>
+                </label>
+            </div>
+            <div class="queue-l2-img">
+                <img src="https://i.scdn.co/image/ab67616d00001e02095191f6b96fd9eff585befc" alt="">
+            </div>
+            <div class="queue-l3-flex">
+                    <div id="b1">
+                        <h4>Shayad</h4>
+                        <h6>Pritam, Arijit Singh</h6>
+                    </div>
+                    <div id="b2">
+                        <div><i class="fa-sharp fa-solid fa-heart"></i></div>
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+            </div>
+
+            <div class="queue-l4-cards">
+                <div class="queue-l4-cards-head">
+                    <div id="c1">Next in queue</div>
+                    <div id="c2" class="scale-button-sp">Open queue</div>
+                </div>
+                <div class="queue-l4-card scale-button-sp">
+                    <!--Button-->
+                    <div class="queue-l4-card-b1">
+                        <span class="material-symbols-outlined">music_note</span>
+                        <i class="fa-sharp fa-solid fa-play"></i>
+                    </div>  
+                    <!--Image-->
+                    <div class="queue-l4-card-img">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273072e9faef2ef7b6db63834a3" alt="...">
+                    </div>
+                    <!--Name-->
+                    <div class="queue-l4-card-name">
+                        <div class="music-player-box1-name-head">SICKO MODE</div>
+                        <div class="music-player-box1-name-artists">Travis Scott</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="music-player-box1">
+                <div class="music-player-box1-img">
+                    <label for="expandQueueCheckBox"><img src="https://i.scdn.co/image/ab67616d00001e02095191f6b96fd9eff585befc" alt="..."></label>
+                </div>
+                <div class="music-player-box1-name">
+                    <div class="music-player-box1-name-head">Shayad</div>
+                    <div class="music-player-box1-name-artists">Pritam, Arijit Singh</div>
+                </div>
+                <div class="music-player-box1-like"><i style="padding: 0px 5px; color: #1CDF63;" class="fa-sharp fa-solid fa-heart"></i></div>
+                <div class="music-player-box1-pip"><span class="material-symbols-outlined">picture_in_picture_alt</span></div>
+            </div>
+            <div class="music-player-box2">
+                <div class="music-player-box2-buttons">
+                    <div><i class="fa-solid fa-shuffle"></i></div>
+                    <div><i class="fa-solid fa-backward-fast"></i></div>
+                    <div class="music-player-box2-play-button scale-button-sp"><i class="fa-solid fa-circle-play"></i></div>
+                    <div><i class="fa-solid fa-forward-fast"></i></div>
+                    <div><i class="fa-solid fa-repeat"></i></div>
+                </div >
+                    <input class="music-player-box2-bar" min="0" max="100" step="0.01" type="range">
+            </div>
+            <div class="music-player-box3">
+                <i class="fa-solid fa-play scale-button-sp" ></i>
+                <i class="fa-solid fa-music scale-button-sp"></i>
+                <i class="fa-solid fa-list scale-button-sp"></i>
+                <i class="fa-solid fa-headphones scale-button-sp"></i>
+                <i class="fa-solid fa-volume-high "></i>
+                <input class="music-player-box3-bar" min="0" max="100" step="0.01" type="range">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>
