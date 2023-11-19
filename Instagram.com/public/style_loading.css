@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loading-screen-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-blend-mode: overlay;
+    z-index: 999;
+
+}
+.logo-icon img{
+    height: 100px;
+
+    position: relative;
+    top: 160px;
+}
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom:-145px;
+
+    color: #fff;
+}
+.logo-text p{
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+}
+.logo-text img{
+    height: 35px;
+}
+.space{
+    flex: 0.5;
+}

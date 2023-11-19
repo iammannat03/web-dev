@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_loading.css">
+    <link rel="stylesheet" href="style_login_page.css">
+</head>
+<body>
+    <!-- Loading -->
+    <!-- <%- include("includes/loading.ejs") %> -->
+    
+    <!-- Login Page -->
+    <div class="content">
+        <div class="content-main">
+            <div class="col-1-space"></div>
+
+            <div class="col-1">
+                <div class="static-frame-div">
+                    <img class="static-frame" src="https://c8.alamy.com/comp/2HJXT8Y/instagram-post-template-on-apple-iphone-13-pro-max-2HJXT8Y.jpg" alt="">
+                </div>
+                <div class="dynamic-frame-div">
+                    <img class="dynamic-frame" src="https://i.etsystatic.com/26832462/r/il/7fa68f/3449784151/il_570xN.3449784151_81vv.jpg" alt>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-2-content">
+                    <div class="col-2-item-1">
+                        <h1>Instagram</h1>
+                        <form action="/user-profile">
+                            <input type="text" placeholder="Phone number, username or email address">
+                            <input type="password" placeholder="Password">
+                            <button>
+                                Log in
+                            </button>
+                        </form>
+                        <p>
+                            OR
+                        </p>
+                        <a id="login-1" href="/facebook-login">Log in with Facebook</a>
+                        <br>
+                        <a id="login-2" href="forgot-password">Forgotten your password?</a>
+                    </div>
+                    <div class="col-2-item-2">
+                        Don't have an account? <a href="/sign-up">Sign up</a>
+                    </div>
+                    <div class="col-2-item-3">
+                        Get the app.
+                        <br>
+                        <img src="" alt="ios store">
+                        <img src="" alt="playstore">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer">
+            <div class="content-footer-links-1">
+                <a href="">Meta</a>
+                <a href="">About</a>
+                <a href="">Blog</a>
+                <a href="">Jobs</a>
+                <a href="">Help</a>
+                <a href="">API</a>
+                <a href="">Privacy</a>
+                <a href="">Terms</a>
+                <a href="">Locations</a>
+                <a href="">Instagram Lite</a>
+                <a href="">Threads</a>
+                <a href="">Contact uploading and non-users</a>
+                <a href="">Meta Verified</a>
+            </div>
+            <div class="content-footer-links-2">
+                <select name="language" id="">
+                    <option value="eng">English(UK)</option>
+                    <option value="esp">Espanol(ES)</option>
+                </select>
+                <p>@ 2023 Instagram from Meta</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app_loading.js"></script>
+</body>
+</html>
