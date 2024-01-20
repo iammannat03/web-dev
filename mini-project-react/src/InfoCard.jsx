@@ -1,4 +1,5 @@
 import "./InfoCard.css";
+import { capitalizeFirstLetter } from "./helper";
 
 export default function InfoCard(info) {
   let data = info.weatherInfo;
@@ -34,7 +35,7 @@ export default function InfoCard(info) {
                     paddingTop: "30px",
                   }}
                 >
-                  {data.city}
+                  {capitalizeFirstLetter(data.city)}
                 </h3>
                 <p style={{ fontSize: "18px", margin: "0 ", padding: "0px" }}>
                   Humidity: {data.humidity}
