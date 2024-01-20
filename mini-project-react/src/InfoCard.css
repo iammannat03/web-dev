@@ -1,0 +1,56 @@
+.card-container {
+  margin: 30px;
+  height: 250px;
+  width: 450px;
+
+  display: flex;
+  padding: 20px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-size: cover;
+  border-radius: 12px;
+}
+.info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: flex-start;
+}
+.first-block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.card-container .first-block .city {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.card-container .first-block .temp {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-container .first-block .temp p {
+  margin: 0;
+}
+.card-container .first-block span {
+  align-items: flex-start;
+}
+.card-container h3 {
+  padding: 0;
+  margin: 0;
+}
+.first-block {
+  flex: 2;
+}
+.last-block {
+  flex: 1;
+}

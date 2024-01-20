@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Loading -->
-    <!-- <%- include("includes/loading.ejs") %> -->
+    <%- include("includes/loading.ejs") %>
     
     <!-- Login Page -->
     <div class="content">
@@ -31,10 +31,10 @@
                 <div class="col-2-content">
                     <div class="col-2-item-1">
                         <h1>Instagram</h1>
-                        <form action="/user-profile">
-                            <input type="text" placeholder="Phone number, username or email address">
-                            <input type="password" placeholder="Password">
-                            <button>
+                        <form method="POST" action="/user-profile">
+                            <input name="username" type="text" placeholder="Phone number, username or email address">
+                            <input name="password" type="password" placeholder="Password">
+                            <button id="button-into">
                                 Log in
                             </button>
                         </form>
