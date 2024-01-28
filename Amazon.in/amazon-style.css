@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+    
+}
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    background-image: url("/Volumes/External SSD-A1/Classroom/Amazon Clone (Resources)/amazon_logo.png");
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+}
+.nav-logo{
+    height: 50px;
+    width: 110px;
+}
+.border{
+    border: 1px solid transparent;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.border:hover{
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.nav-address{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:8px;
+}
+#location-icon{
+    margin-top: 10px;
+}
+#nav-address-l1{
+    color: rgba(255,255,255,0.7);
+    font-size: 0.75em;
+}
+#nav-address-l2{
+    font-size: 0.875em;
+    font-weight: bold;    
+}
+.nav-address div{
+    padding: 0px 2px 0px;
+}
+.nav-search{
+    display: flex;
+    border-radius: 4px;
+    width: 57vw;
+    height: 40px;
+    justify-content: space-evenly;
+    margin-left: 6px;
+}
+#search-select{
+    background-color: #f3f3f3;
+    width: 52px;
+    text-align: center;
+    border-radius: 4px 0 0 4px;
+    border: none;
+}
+#search-select:hover{
+    background-color: #d5d3d3;
+    width: 52px;
+    text-align: center;
+    border-radius: 4px 0 0 4px;
+    border: none;
+}
+#search-input{
+    font-size: 14px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+.nav-search-button{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #0f1111;
+    background-color: rgb(255, 191, 0);
+    border-radius: 0 4px 4px 0;
+}
+.nav-search-button:hover{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #0f1111;
+    background-color: rgb(255, 174, 0);
+    border-radius: 0 4px 4px 0;
+}
+.nav-lang{
+    display: flex;
+    padding: 12px;
+    margin: 6px;
+}
+.nav-lang-flag{
+    background-image: url("/Volumes/External SSD-A1/Classroom/Amazon Clone (Resources)/en_flag.jpg");
+    background-size: cover;
+    width: 22px;
+    height: 16px;
+    margin-right: 4px;
+}
+.nav-lang-select{
+    font-size: 0.875rem;
+}
+.nav-lang-select .fa-solid{
+    font-size: 0.625rem;
+}
+.account-signin{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 6px;
+}
+.account-signin .l1{
+    font-size: 0.75rem;
+}
+.account-signin .l2{
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+.l2 .fa-solid{
+    font-size: 0.625rem;
+}
+.returns-orders{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 6px;
+}
+.returns-orders .l1{
+    font-size: 0.75rem;
+}
+.returns-orders .l2{
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+.nav-cart{
+    display: flex;
+    align-items: flex-end;
+    padding: 6px;
+    margin: 3px;
+}
+.nav-cart-symbol{
+    font-size: 1.5rem;
+}
+.nav-cart-text{
+    font: size 0.875rem;;
+    font-weight: bold;
+}
+.panel{
+    display: flex;
+    background-color: #232f3e;
+    height: 39px;
+    color: white;
+    align-items: center;
+    padding: 0 10px 0;
+}
+.panel-all-options{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+.panel-all-options-text{
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+.panel-all-options .fa-solid{
+    font-size: 1.25rem;
+    padding-bottom: 1px;
+    margin-right: 3px;
+}
+.panel-nav{
+    display: flex;
+    margin: 0 10px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 82.3vw;
+}
+.panel-nav-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.panel-nav-content span{
+    font-size: 0.875rem;
+    margin: 0 1.5px 0;
+    padding: 6px;
+    font-weight: 530;
+}
+.nav-sgdn{
+    display: flex;
+    flex-direction: row;
+}
+.nav-sgdn div{
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin: 0 1.5px 0;
+    padding: 6px;
+    
+}
+.hero-section{
+    background-image: url("https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg");
+    height: 600px;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.hero-textbox-1{
+    height: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fff;
+    margin: 20px;
+    font-size: 0.875;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.hyperlink-a-green-to-orange{
+    text-decoration: none;
+    color: #007185;
+}
+.hyperlink-a-green-to-orange:hover{
+    text-decoration: none;
+    color: #C7511F;
+    text-decoration: underline;
+}
+.shopsection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* position: absolute;
+    top: -245px; */
+    background-color: #e2e2e2;
+    height:630px;
+    align-items: flex-start;
+}
+.shopsection-bc-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    top: -250px;
+    align-items: flex-start;
+    height:880px;
+}
+.shopsection-box{
+    padding: 20px;
+    background-color: #fff;
+    align-content:space-evenly;
+
+}
+.shopsection-box-op{
+    display: flex;
+    width: 255px;
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.shopsection-box>h1{
+    font-size: 21px;
+    height: 21px;
+    margin: none;
+}
+.shopsection-box-op img{
+    height: 100px;
+    width: 120px;
+    object-fit: contain;
+}
+.shopsection-box nav a{
+    font-size: 0.8125rem;
+}
+.shopsection-box-op div p{
+    font-size: 0.75rem;
+}
+#shopsection-box-3 h1{
+    padding-bottom: 15px;
+}
+#shopsection-box-3{
+    height: 359px;
+    padding-bottom: 20px;
+}
+#shopsection-box-3 .shopsection-box-op{
+    height: 285px;
+}
+#shopsection-box-5 .shopsection-box-op{
+    background-image: url("https://i.pinimg.com/564x/b6/15/f1/b615f1d7352feb5a0c39359b29f1cef5.jpg");
+    background-size: cover;
+}
+#shopsection-box-5 nav{
+    padding-top: 10px;
+}
+
+#shopsection-box-6 .shopsection-box-op{
+    background-image: url("https://i.pinimg.com/564x/cb/1b/f3/cb1bf3947559941e38f070b8f60aca44.jpg");
+    background-size: cover;
+}
+#shopsection-box-6 nav{
+    padding-top: 10px;
+}
+#shopsection-box-7 .shopsection-box-op{
+    background-image: url("https://i.pinimg.com/564x/d4/8c/9a/d48c9acf722c3720073912d162129200.jpg");
+    background-size: cover;
+}
+#shopsection-box-7 nav{
+    padding-top: 10px;
+}
+#shopsection-box-3-sign-in-and-ad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0,0,0,0);
+    height: 400px;
+}
+.shopsection-box-3-sign-in{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 93px;
+    width: 256px;
+    padding: 20px;
+}
+
+.shopsection-box-3-sign-in-text{
+    padding-bottom: 10px;
+}
+.shopsection-box-3-sign-in-button{
+    height: 29px;
+    border-radius: 8px;
+    border: none;
+    color: #0f1111;
+    background-color: rgb(255, 207, 62);
+    margin: none;
+}
+.shopsection-box-3-sign-in-button:hover{
+    height: 29px;
+    border-radius: 8px;
+    border: none;
+    color: #0f1111;
+    background-color: rgb(255, 191, 0);
+    margin: none;
+}
+.shopsection-box-3-ad{
+    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_2x._CB418309979_.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 226px;
+    width: 270px;
+}
+.foot-panel{
+    display: flex;
+    flex-direction: column;
+}
+.foot-panel-1{
+    background-color: #314151 ;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    height: 49px;
+}
+.foot-panel-1:hover{
+    background-color: #485768;
+}
+.foot-panel-2{
+    background-color:  #232f3e;
+    height: 290px;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #3A4553;
+}
+.foot-panel-2-box{
+    color: white;
+}
+.foot-panel-2-box h3{
+    padding: 6px 0 14px 0;
+}
+.foot-panel-2-box a{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    padding: 3px 0;
+    text-decoration: none;
+    color: white;
+}
+.foot-panel-2-box a:hover{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    padding: 3px 0;
+    text-decoration: underline;
+    color: white;
+}
+.foot-panel-3 {
+    height: 100px;
+    background-color: #232f3e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.foot-panel-3-amazon-logo{
+    background-image: url("/Volumes/External SSD-A1/Classroom/Amazon Clone (Resources)/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+    margin: 0px 100px;
+}
+.sel-lang{
+    border: 1px solid #cccccc9d;
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 10px;
+    margin: 0 5px;
+}
+
+.sel-lang i{
+    color: white;
+}
+.sel-lang select{
+    background-color: #232f3e;
+    color: #cccccc;
+    border: none;
+    font-size: 13px;
+}
+
+.foot-panel-3-curr{
+    color: #cccccc;
+    border: 1px solid #cccccc9d;
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 10px;
+    padding-right: 25px;
+    font-size: 13px;
+    margin: 0 5px;
+}
+.foot-panel-3-curr i{
+    font-weight: bold;
+    color: white;
+}
+.foot-panel-3-country{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cccccc9d;
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 10px;
+    padding-right: 25px;
+    font-size: 13px;
+    margin: 0 5px;
+}
+.foot-panel-3-country-flag{
+    background-image: url("/Volumes/External SSD-A1/Classroom/Amazon Clone (Resources)/en_flag.jpg");
+    background-size: cover;
+    height: 12px;
+    width: 19px;
+}.foot-panel-3-country-text{
+    color: #cccccc;
+}
+.foot-panel-4{
+    background-color: #131A22;
+}
+.foot-panel-end{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+.foot-panel-end div{
+    color: white;
+    font-size: 0.75rem;
+    background-color: #131A22;
+}
+.foot-panel-end-b1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.foot-panel-end-b1 a{
+    margin: 5px;
+}
+.hyperlink-white-to-white_underline{
+    text-decoration: none;
+    color: white;
+}
+.hyperlink-white-to-white_underline:hover{
+    text-decoration: underline;
+    color: white;
+}
